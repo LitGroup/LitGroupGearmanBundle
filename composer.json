@@ -1,0 +1,25 @@
+{
+    "name": "litgroup/gearman-bundle",
+    "description": "Gearman Job Server API integration for Symfony 2",
+    "keywords": ["gearman", "job", "queue", "server"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roman Shamritskiy",
+            "email": "roman@litgroup.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "ext-gearman": "*",
+        "symfony/framework-bundle": "~2.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "LitGroup\\Bundle\\GearmanBundle": ""
+        }
+    },
+    "target-dir": "LitGroup/Bundle/GearmanBundle"
+
+}
