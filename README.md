@@ -1,13 +1,13 @@
 GearmanBundle
 =============
 
-Simplest __gearman php-extension__ integration with __Dependency Injectiono Container__ of __Symfony 2__
+Simpliest __Gearman php-extension__ integration with __Dependency Injectiono Container__ of __Symfony 2__
 
 Installation
 ------------
 
 ### Before installation
-At first you should to install __PECL Extension for Gearman__.
+At first you should install __PECL Extension for Gearman__.
 See instruction [here][1].
 
 ### Installation with Composer
@@ -44,7 +44,7 @@ class AppKernel extends Kernel
 Configuration
 -------------
 
-Bundle only supports _yaml_-configuration.
+Bundle supports only _yaml_-configuration.
 
 With empty configuration localhost server will be used on default port.
 
