@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+
+	<title>Gearman Bundle</title>
+
+	<parser>
+		<target>build/apidoc</target>
+		<markers>
+			<item>TODO</item>
+			<item>FIXME</item>
+		</markers>
+		<extensions>
+			<extension>php</extension>
+		</extensions>
+	</parser>
+
+	<transformer>
+		<target>build/apidoc</target>
+	</transformer>
+
+	<transformations>
+		<template name="responsive" />
+	</transformations>
+
+	<files>
+		<directory>./</directory>
+        <ignore>Resources/*</ignore>
+        <ignore>Tests/*</ignore>
+        <ignore>build/*</ignore>
+        <ignore>vendor/*</ignore>
+	</files>
+</phpdoc>
