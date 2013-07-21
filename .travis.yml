@@ -11,8 +11,6 @@ env:
   - SYMFONY_VERSION="dev-master"
 
 before_script:
-  - sudo apt-get install -y libgearman-dev
-  - pecl install gearman
   - composer require symfony/framework-bundle:${SYMFONY_VERSION}
 
 script: phpunit --configuration phpunit.xml.dist
