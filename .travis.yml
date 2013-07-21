@@ -11,6 +11,7 @@ env:
   - SYMFONY_VERSION="dev-master"
 
 before_script:
+  - sudo apt-get install -y libgearman
   - pecl install gearman
   - composer require symfony/framework-bundle:${SYMFONY_VERSION}
 
