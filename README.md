@@ -56,8 +56,8 @@ You can also specify the list of servers:
 ```yaml
 lit_group_gearman:
     servers:
-        - 10.0.0.1
-        - 10.0.0.2:4703 # Specify the port
+        - "10.0.0.1"
+        - "10.0.0.2:4703" # Specify the port
 ```
 
 Usage
