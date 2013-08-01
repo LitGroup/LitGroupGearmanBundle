@@ -54,6 +54,54 @@ abstract class AbstractLitGroupGearmanExtensionTest extends \PHPUnit_Framework_T
     /**
      * @test
      */
+    public function testServersList()
+    {
+        $container = $this->getContainer();
+        $container->registerExtension($this->getExtension());
+        $this->loadFromFile($container, 'servers');
+        $this->compileContainer($container);
+
+        $this->assertEquals('GearmanClient', $container->getParameter('litgroup_gearman.client.class'));
+        $this->assertEquals('GearmanWorker', $container->getParameter('litgroup_gearman.worker.class'));
+
+        $client = $container->getDefinition('litgroup_gearman.client');
+        $this->assertEquals('GearmanClient', $client->getClass());
+        $this->assertEquals(
+            [
+                [
+                    'addServers',
+                    [
+                        [
+                            '10.0.0.1:4703',
+                            '10.0.0.2:4703'
+                        ]
+                    ]
+                ],
+            ],
+            $client->getMethodCalls()
+        );
+
+        $worker = $container->getDefinition('litgroup_gearman.worker');
+        $this->assertEquals('GearmanWorker', $worker->getClass());
+        $this->assertEquals(
+            [
+                [
+                    'addServers',
+                    [
+                        [
+                            '10.0.0.1:4703',
+                            '10.0.0.2:4703'
+                        ]
+                    ]
+                ],
+            ],
+            $worker->getMethodCalls()
+        );
+    }
+
+    /**
+     * @test
+     */
     public function testServersOverride()
     {
         $container = $this->getContainer();

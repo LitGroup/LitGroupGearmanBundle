@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:target="http://litgroup.ru/schema/dic/gearman"
+        targetNamespace="http://litgroup.ru/schema/dic/gearman"
+        elementFormDefault="qualified">
+
+    <xs:element name="config" type="target:config" />
+
+    <xs:complexType name="config">
+        <xs:all>
+            <xs:element name="servers" type="target:servers" minOccurs="0" maxOccurs="1" />
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="servers">
+        <xs:sequence>
+            <xs:element name="server" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

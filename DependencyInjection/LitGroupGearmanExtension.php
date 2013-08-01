@@ -11,11 +11,9 @@
 
 namespace LitGroup\Bundle\GearmanBundle\DependencyInjection;
 
-use Symfony\Component\Config\Resource\FileResource;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
-use Symfony\Component\DependencyInjection\Exception\BadMethodCallException;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader;
 
@@ -52,5 +50,13 @@ class LitGroupGearmanExtension extends Extension
     public function getNamespace()
     {
         return 'http://litgroup.ru/schema/dic/gearman';
+    }
+
+    /**
+     * @return string
+     */
+    public function getXsdValidationBasePath()
+    {
+        return __DIR__.'/../Resources/config/schema/';
     }
 }

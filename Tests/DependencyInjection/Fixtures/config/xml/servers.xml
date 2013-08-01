@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gearman:config
+        xmlns:gearman="http://litgroup.ru/schema/dic/gearman"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://litgroup.ru/schema/dic/gearman http://litgroup.ru/schema/dic/gearman/gearman-1.0.xsd">
+
+    <gearman:servers>
+        <gearman:server>10.0.0.1:4703</gearman:server>
+        <gearman:server>10.0.0.2:4703</gearman:server>
+    </gearman:servers>
+
+</gearman:config>
