@@ -44,20 +44,38 @@ class AppKernel extends Kernel
 Configuration
 -------------
 
-Bundle supports only _yaml_-configuration.
-
 With empty configuration localhost server will be used on default port.
 
-```yaml
-lit_group_gearman: ~
-```
+You can also specify the list of servers. Look on examples for `yaml`, `xml` and `php` configurations:
 
-You can also specify the list of servers:
 ```yaml
 lit_group_gearman:
     servers:
         - "10.0.0.1"
         - "10.0.0.2:4703" # Specify the port
+```
+
+```xml
+<gearman:config
+        xmlns:gearman="http://litgroup.ru/schema/dic/gearman"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://litgroup.ru/schema/dic/gearman http://litgroup.ru/schema/dic/gearman/gearman-1.0.xsd">
+
+    <gearman:servers>
+        <gearman:server>10.0.0.1:4703</gearman:server>
+        <gearman:server>10.0.0.2:4703</gearman:server>
+    </gearman:servers>
+
+</gearman:config>
+```
+
+```php
+$container->loadFromExtension('lit_group_gearman', [
+    'servers' => [
+        '10.0.0.1:4703',
+        '10.0.0.2:4703',
+    ]
+]);
 ```
 
 Usage
