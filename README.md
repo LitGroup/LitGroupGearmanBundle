@@ -1,7 +1,7 @@
 GearmanBundle
 =============
 
-Simpliest __Gearman php-extension__ integration with __Dependency Injectiono Container__ of __Symfony 2__
+Simpliest __Gearman php-extension__ integration with __Dependency Injection Container__ of __Symfony 2__
 
 Installation
 ------------
