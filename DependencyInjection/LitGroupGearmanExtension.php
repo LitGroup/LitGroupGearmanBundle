@@ -30,17 +30,20 @@ class LitGroupGearmanExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $config = $this->processConfiguration(new Configuration(), $configs);
+        $serversConfig = implode(',', $config['servers']);
+
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('gearman.xml');
 
+
         $container
             ->getDefinition('litgroup_gearman.client')
-            ->addMethodCall('addServers', [$config['servers']])
+            ->addMethodCall('addServers', [$serversConfig])
         ;
         $container
             ->getDefinition('litgroup_gearman.worker')
-            ->addMethodCall('addServers', [$config['servers']])
+            ->addMethodCall('addServers', [$serversConfig])
         ;
     }
 
