@@ -41,7 +41,7 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
     {
         $expected = [
             'servers' => [
-                '127.0.0.1:4703'
+                '127.0.0.1:4730'
             ]
         ];
 
@@ -55,7 +55,7 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
     {
         $expected = [
             'servers' => [
-                '127.0.0.1:4703'
+                '127.0.0.1:4730'
             ]
         ];
 
@@ -75,21 +75,21 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
             // Test #1
             [
                 // Expected:
-                [ 'servers' => [ '10.0.0.1:4703', '10.0.0.2:4704', '10.0.0.3' ] ],
+                [ 'servers' => [ '10.0.0.1:4730', '10.0.0.2:4731', '10.0.0.3' ] ],
                 // Configs:
                 [
-                    [ 'servers' => [ '192.168:4703' ] ],
-                    [ 'servers' => [ '10.0.0.1:4703', '10.0.0.2:4704', '10.0.0.3' ] ]
+                    [ 'servers' => [ '192.168:4730' ] ],
+                    [ 'servers' => [ '10.0.0.1:4730', '10.0.0.2:4731', '10.0.0.3' ] ]
                 ]
             ],
 
             // Test #2
             [
                 // Expected:
-                [ 'servers' => [ '127.0.0.1:4703' ] ],
+                [ 'servers' => [ '127.0.0.1:4730' ] ],
                 // Configs:
                 [
-                    [ 'servers' => [ '192.168:4703' ] ],
+                    [ 'servers' => [ '192.168:4730' ] ],
                     [ 'servers' => [] ]
                 ]
             ],
@@ -97,11 +97,11 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
             // Test #3
             [
                 // Expected:
-                [ 'servers' => [ '10.0.0.1:4703', '10.0.0.2:4704', '10.0.0.3' ] ],
+                [ 'servers' => [ '10.0.0.1:4730', '10.0.0.2:4730', '10.0.0.3' ] ],
                 // Configs:
                 [
-                    [ 'servers' => [ '192.168:4703' ] ],
-                    [ 'servers' => [ '10.0.0.1:4703', '10.0.0.2:4704', '10.0.0.3' ] ],
+                    [ 'servers' => [ '192.168:4730' ] ],
+                    [ 'servers' => [ '10.0.0.1:4730', '10.0.0.2:4730', '10.0.0.3' ] ],
                     [ ]
                 ]
             ],

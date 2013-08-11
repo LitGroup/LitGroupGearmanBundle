@@ -38,9 +38,9 @@ class Configuration implements ConfigurationInterface
                         // If user sets "servers: ~" in the configuration then default value will not applied.
                         // Therefore we add this validation. But defaultValue() also needed to show
                         // default value in the dump of reference.
-                        ->always(function ($v) { return empty($v) ? ['127.0.0.1:4703'] : $v;  })
+                        ->always(function ($v) { return empty($v) ? ['127.0.0.1:4730'] : $v;  })
                     ->end()
-                    ->defaultValue(['127.0.0.1:4703'])
+                    ->defaultValue(['127.0.0.1:4730'])
                     ->info('List of IP addresses and ports (optional) of Gearman servers.')
                     ->prototype('scalar')
                         ->cannotBeEmpty()

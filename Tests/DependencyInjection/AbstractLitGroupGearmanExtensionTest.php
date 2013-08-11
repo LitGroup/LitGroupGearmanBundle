@@ -36,7 +36,7 @@ abstract class AbstractLitGroupGearmanExtensionTest extends \PHPUnit_Framework_T
         $this->assertEquals('GearmanClient', $client->getClass());
         $this->assertEquals(
             [
-                [ 'addServers', ['127.0.0.1:4703'] ]
+                [ 'addServers', ['127.0.0.1:4730'] ]
             ],
             $client->getMethodCalls()
         );
@@ -45,7 +45,7 @@ abstract class AbstractLitGroupGearmanExtensionTest extends \PHPUnit_Framework_T
         $this->assertEquals('GearmanWorker', $worker->getClass());
         $this->assertEquals(
             [
-                [ 'addServers', ['127.0.0.1:4703'] ]
+                [ 'addServers', ['127.0.0.1:4730'] ]
             ],
             $worker->getMethodCalls()
         );
